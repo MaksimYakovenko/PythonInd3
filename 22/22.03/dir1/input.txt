@@ -1,0 +1,44 @@
+T21.1 У текстовому файлі є дати, задані у форматі dd.mm.yyyy або у форматі
+yyyy/mm/dd. Також день та/або місяць може містити одну цифру, а не 2.
+Привести всі дати до єдиного формату dd.mm.yyyy.
+Вказівка: використати регулярні вирази та функцію (метод) sub.
+
+T21.5 У текстовому файлі містяться дати у форматі dd.mm.yyyy або yyyymm-dd або yyyy/mm/dd
+Привести дати до єдиного формату за допомогою шаблону(ів), що
+містить(ять) іменовані підгрупи.
+
+Some text
+Date 1: 2020/10/21
+Date 2: 2020-10-22
+Date 3: 23.10.2020
+Another dates: 1.1.989. :8/8/8: a7/7/7! 06-05-04! ^3-2-1!
+More dates: 2.10.1999, 1988-09-3, 09.2.2003, 2008/11/11.
+
+
+T21.2 За допомогою регулярних виразів розбити текст у текстовому файлі на
+речення.
+
+Mr. Smith bought cheapsite.com for 1.5 million dollars, i.e. he paid a lot for it!
+Did he mind? Adam Jones Jr. thinks he didn't. In any case, this isn't true...
+Well, with a probability of .9 it isn't. Amount: 231.30.
+
+
+T21.6 У текстовому файлі міститься переписка декількох осіб електронною
+поштою. Скласти список контактів (адрес електронної пошти) осіб, що
+фігурують у даній переписці. Використати регулярні вирази.
+
+mymail@email.com: True!
+mymail@email.com: True!
+my4.mail_@univ.kyiv.ua: True!
+1my4.mail@univ.kyiv.ua: True!
+my4.mail@2univ.kyiv.ua: False!
+my..mail@univ.kyiv..ua: True!
+my..mail@univ..ua: False!
+.my.mail333@univ1.kyiv.ua.: False!
+my.mail@.univ.kyiv.ua.: False!
+my.mail.@univ.kyiv.ua: False!
+my.mail @univ.kyiv.ua: False!
+my@a1.ua: True!
+my@univ: False!
+my@a.u: False!
+my@a1.ua: True!
