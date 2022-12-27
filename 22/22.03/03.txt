@@ -1,0 +1,1 @@
+Різниця між 'C:\Users\Admin\PycharmProjects\pythonProject Yakovenko\22\22.03\dir1\input.txt' і 'C:\Users\Admin\PycharmProjects\pythonProject Yakovenko\22\22.03\dir2\input.txt' є 905 байтів
