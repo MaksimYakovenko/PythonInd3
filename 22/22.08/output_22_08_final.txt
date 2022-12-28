@@ -1,6 +1,0 @@
-Зміни, які відбулися в C:\Users\Admin\PycharmProjects\pythonProject Yakovenko\22\22.08 з 2022.12.03 15:35:49 по 2022.12.03 15:39:35:
-Змінено файл 22.08.py за адресою C:\Users\Admin\PycharmProjects\pythonProject Yakovenko\22\22.08, час зміни: 2022.12.03 15:37:27
-Змінено файл output_22_08_final.txt за адресою C:\Users\Admin\PycharmProjects\pythonProject Yakovenko\22\22.08, час зміни: 2022.12.03 15:36:30
-Створено файл output_22_08_2022_12_03_15_35_52.txt за адресою C:\Users\Admin\PycharmProjects\pythonProject Yakovenko\22\22.08
-Створено файл output_22_08_2022_12_03_15_37_28.txt за адресою C:\Users\Admin\PycharmProjects\pythonProject Yakovenko\22\22.08
-Створено файл output_22_08_2022_12_03_15_39_35.txt за адресою C:\Users\Admin\PycharmProjects\pythonProject Yakovenko\22\22.08
