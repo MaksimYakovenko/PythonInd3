@@ -1,0 +1,15 @@
+import re
+
+PATT_ROM = r"\bM{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})\b"
+
+PATT_COMP = re.compile(PATT_ROM, flags=0)
+
+t = "Ми живемо у XXI столітті. А зараз MMXXII рік"
+
+list = []
+for number in PATT_COMP.finditer(t):
+
+    if number.group() != "":
+        list.append(number.group())
+
+print(list)
