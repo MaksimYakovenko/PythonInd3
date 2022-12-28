@@ -1,0 +1,1 @@
+Exception QueueEmptyError was caught in method "take" with paremeters (<__main__.Queue object at 0x00000246746AEE30>,)
