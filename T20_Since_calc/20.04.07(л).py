@@ -5,26 +5,25 @@ from matplotlib import pyplot as plt
 NUM = 500
 
 
-def taylor_log(n):
-    def _taylor_log(x):
-        s = x.copy()
-        p = x.copy()
-        for k in range(2, n + 1):
-            p *= x * x / ((2 * k - 2) * (2 * k - 1))
-            s += p
-        return s
-
-    _taylor_log.__name__ = f"taylor_log({n})"
-    return _taylor_log
+def fun(x):
+    try:
+        y = 1 / (1 + x ** 2)
+    except Exception as e:
+        print('Exception handling', e)
+        n = x.size
+        y = np.zeros(n)
+        for i in range(n):
+            y[i] = 1 / (1 + x[i] ** 2)
+    return y
 
 
 def taylor_fun(n):
     def _taylor_fun(x):
-        s = x.copy()
-        p = x.copy()
-        for k in range(2, n + 1):
-            p *= x * x * (2 * k - 3) / (2 * k - 1)
-            s += p
+        s = np.zeros(x.size)
+        a = 1
+        for k in range(1, n, 2):
+            s += a
+            a *= - x * x
         return s
     _taylor_fun.__name__ = f"taylor(fun, {n})"
     return _taylor_fun
@@ -45,7 +44,7 @@ def lagrange(f, a, b, n):
             y += yk[k] * lk
         return y
 
-    _lagrange.__name__ = f"lagrange({f.__name__},{n})"
+    _lagrange.__name__ = f"lagrange({f.__name__}, {n})"
     return _lagrange
 
 
@@ -130,17 +129,16 @@ def plot_functions(a, b, interpolated, *interpolators):
 
 
 if __name__ == "__main__":
-    a = - 2 * np.pi
-    b = 2 * np.pi
+    a = -3
+    b = 2.5
     m = 10
     n = 7
     k = 7
     plot_functions(
         a, b,
-        np.log,
-        taylor_log(m),
-        lagrange(np.log, a, b, n),
-        linear_interpolation(np.log, a, b, k)
+        fun,
+        taylor_fun(m),
+        lagrange(fun, a, b, n),
+        linear_interpolation(fun, a, b, k)
     )
-
 
